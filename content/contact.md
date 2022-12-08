@@ -1,7 +1,6 @@
 ---
 title: "Contact"
 ---
-### My Accounts
 
 ### 広告配信について
 <p></p>  

@@ -10,7 +10,7 @@ publishDir = "docs"
 googleAnalytics = "UA-110948318-1"
 archive = "archives"
 hasCJKLanguage = true
-summaryLength = 120
+summaryLength = 125
 
 [taxonomies]
   category = "categories"
