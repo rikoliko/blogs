@@ -1,0 +1,85 @@
+baseURL = "https://rikoliko.github.io/"
+languageCode = "ja"
+title = "LLxyo's Daydreams"
+author = "LLxyo"
+paginate = 12
+contentdir = "content"
+layoutdir = "layouts"
+favicon = "/static/favicon.ico"
+publishDir = "docs"
+googleAnalytics = "UA-110948318-1"
+archive = "archives"
+hasCJKLanguage = true
+summaryLength = 120
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  brand = "brand"
+  genre = "genre"
+
+[permalinks]
+  post = "/post/:filename/"
+
+[imaging]
+  quality =  99
+
+[params]
+  title = "LLxyo's Daydreams"
+  description =  "この感情、忘れないように<br>集めて閉じ込めた"
+  katex =  true
+  images = ["Card.png"]
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+
+  [[related.indices]] # relatedに関連付ける要素とその度合いを指定
+    name = "series"
+    weight = 100
+  
+  [[related.indices]]
+    name = "genre"
+    weight = 80
+
+  [[related.indices]]
+    name = "brand"
+    weight = 90
+  
+  [[related.indices]]
+    name = "categories"
+    weight = 10
+
+[menu]
+   [[menu.nav]]
+     name =  "Posts"
+     url=  "/post/"
+     weight =  1
+[[menu.nav]]
+     name =  "Categories"
+     url =  "/categories/"
+     weight =  2
+   [[menu.nav]] # taxonomies一覧にリンク
+     name =  "Tags"
+     url =  "/taxonomies/"
+     weight =  3
+   [[menu.nav]]
+     name = "Contact"
+     url = "/contact/"
+     weight = 4
+   [[menu.nav]]
+     name = "RSS"
+     url = "/index.xml"
+     weight = 5
+
+
+[markup]
+  defaultMarkdownHandler = "blackfriday"
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+      unsafe = true
+
+[blackfriday]
+  hrefTargetBlank = true

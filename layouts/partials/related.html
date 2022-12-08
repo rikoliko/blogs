@@ -1,0 +1,19 @@
+{{ $related := .Site.RegularPages.Related . | first 8 }}
+{{ with $related }}
+<h3 class="seealso">See Also</h3> <!--firstで表示する記事数指定-->
+<ul>
+  {{ range .}}
+  <div class="article">
+      <li class="related">
+
+         <a href="{{ .Permalink }}" class="article_link">
+         
+            <h5 class="post_title">{{ .Title }}</h5>
+            {{ end }}
+         </a>
+      </li>
+    </div>
+  </ul>
+<div class="clear"></div>
+
+{{ end }}

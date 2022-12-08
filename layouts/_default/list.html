@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <main id="main">
+    <h2>{{ .Title }}</h2>
+    <h2 class="slidein3">私の感情、すべて見せてあげる─</h2>
+
+    <ul>
+    {{ range .Paginator.Pages.ByPublishDate.Reverse }}
+    <div class="article">
+        <li class="post">
+
+           <a href="{{ .Permalink }}" class="article_link">
+           
+              <h4 class="post_title">{{ .Title }}</h4>
+
+              <p class="description">
+                {{ substr .Summary 0 50 }}…{{ end }}
+              </p>
+           
+           </a>
+        </li>
+    </div>
+    </ul>
+    {{ partial "pagination.html" . }}
+  </main>
+{{ end }}
